@@ -25,7 +25,7 @@ export default function contact() {
   
   return (
     <Form  validated={validated} onSubmit={handleSubmit} className="contact-form-container">
-      <h2 className="contactForm-h2">{validated ? "We'll get back to you soon!": "We would love to talk with you. Fill out the form and we'll get in touch ASAP."}
+      <h2 className="contactForm-h2">{validated ? "We'll get back to you!": "We would love to talk with you. Fill out the form and we'll get in touch ASAP."}
         <br></br><br></br><b style={{color:"#2F4858",fontWeight:"500"}}>
           Want to get in touch about a shipment? Tell us about it <i>
             <a href="/quoteForm">here</a>
