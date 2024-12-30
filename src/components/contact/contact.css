@@ -1,0 +1,32 @@
+.contact-form-container {
+    background-image: url("public/ontheroad.jpg");
+    background-size: cover;
+    background-position: 0%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.styled-contactForm {
+    background-color: #2F4858;
+    padding: 3em;
+    border-radius: 7em 0 0 7em;
+    color: white;
+    margin-top: 7%;
+}
+
+.contactForm-h2 {
+    color: #0388B3;
+    text-align: center;
+    width: 50%;
+    margin-right: 2em;
+}
+
+.contactForm-h2 a:active {
+    color: #2F4858;
+}
+.contactForm-h2 a {
+    color: #0388B3;
+}

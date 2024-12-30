@@ -1,0 +1,23 @@
+.hero-styles {
+    text-align: left;
+    color: black;
+    position: relative;
+    top: 7em;
+}
+
+.hero-span {
+    color: #0388B3;
+}
+
+.hero-paragraph {
+    width: 400px;
+    color: white;
+}
+
+.hero-button {
+    margin-left: 6em;
+}
+
+.hero-h2 {
+    max-width: 500px;
+}

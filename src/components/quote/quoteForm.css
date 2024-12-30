@@ -1,0 +1,43 @@
+.contactForm-style {
+    background-image: url('/andreas-strandman-BXAHJgHiPu4-unsplash.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 3em;
+    margin: 3em auto 0 auto;
+}
+
+.contactForm-style h1 {
+    margin: 1em auto;
+    text-align: center;
+    color: white;
+    opacity: 90%;
+}
+
+input {
+    opacity: 80%;
+}
+
+.Quote-questions-container {
+    display: flex;
+    flex-direction: column;
+    /* opacity: 100%; */
+}
+
+.Quote-questions input {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.Quote-questions select {
+    width: 50%;
+    margin: 0 auto;
+    opacity: 80%;
+}
+
+.quoteForm-submit-btn {
+    width: 11em;
+    margin: 3em auto;
+    display: flex;
+    flex-direction: column;
+    opacity: 80%;
+}
