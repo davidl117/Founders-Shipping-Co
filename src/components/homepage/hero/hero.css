@@ -9,10 +9,17 @@
     color: #0388B3;
 }
 
+.hero-paragraph-background {
+    background-color: gray;
+    opacity: 40%;
+}
+
 .hero-paragraph {
     width: 400px;
-    color: white;
+    color: black;
+    opacity: 100%;
 }
+
 
 .hero-button {
     margin-left: 6em;

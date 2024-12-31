@@ -2,17 +2,33 @@ import "./contact.css"
 import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Button from 'react-bootstrap/Button';
-import { useState } from "react";
+import { useState,useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function contact() {
 
   const [validated, setValidated] = useState(false);
+  const form = useRef();
+
+const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_nx5586o', 
+                     "template_2er10ud", 
+                     form.current, {publicKey:"kVw8CQFQRx8X54hXz"})
+    .then(() => {
+        console.log("message sent");
+     }, (error) => {
+            console.log("failed " + error);
+    });
+  }
+
 
   const handleSubmit = (e) => {
     const form = e.currentTarget;
     if (form.checkValidity() === true) {
       e.preventDefault();
       e.stopPropagation();
+      sendEmail(e)
     }
     setValidated(true);
   };
@@ -24,7 +40,7 @@ export default function contact() {
 
   
   return (
-    <Form  validated={validated} onSubmit={handleSubmit} className="contact-form-container">
+    <Form ref={form} validated={validated} onSubmit={handleSubmit} className="contact-form-container">
       <h2 className="contactForm-h2">{validated ? "We'll get back to you!": "We would love to talk with you. Fill out the form and we'll get in touch ASAP."}
         <br></br><br></br><b style={{color:"#2F4858",fontWeight:"500"}}>
           Want to get in touch about a shipment? Tell us about it <i>
@@ -39,7 +55,7 @@ export default function contact() {
         <InputGroup.Text>First and last name</InputGroup.Text>
         <Form.Control
            aria-label="First name"
-           name="user-name"
+           name="name"
            required
            />
       </InputGroup>
