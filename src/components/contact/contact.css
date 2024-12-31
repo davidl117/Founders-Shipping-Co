@@ -30,3 +30,23 @@
 .contactForm-h2 a {
     color: #0388B3;
 }
+
+@media (max-width: 600px) {
+    .contact-form-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-top: 5em;
+    }
+    
+    .styled-contactForm {
+        border-radius: 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contactForm-h2 {
+        display: none;
+    }
+}

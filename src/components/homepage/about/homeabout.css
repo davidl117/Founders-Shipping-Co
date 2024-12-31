@@ -8,16 +8,21 @@
     justify-content: center;
 }
 
-img {
-    /* width: 400px; */
-    max-height: 400px;
-    margin-right: 2em;
-}
-
 .home-about-section-writing {
     max-width: 500px;
     margin-top: 9em;
 }
+
+img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    margin-right: 2em;
+}
+
 
 .double-pic-align {
     display: flex;
@@ -29,3 +34,24 @@ img {
     max-width: 400px;
 }
 
+@media  (max-width: 600px ){
+
+    .double-pic-align {
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        width: 100vw;
+    }
+
+    .home-about-section {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .home-about-section-writing {
+        margin: 0;
+    }
+}

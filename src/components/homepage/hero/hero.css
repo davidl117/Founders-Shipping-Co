@@ -1,30 +1,25 @@
 .hero-styles {
     text-align: left;
-    color: black;
+    color: white;
     position: relative;
     top: 7em;
+    max-width: 600px;
+    /* background-color: #2F4858; */
+    border-radius: 5%;
+}
+
+.hero-h2 {
+    max-width: 600px;
+    
 }
 
 .hero-span {
     color: #0388B3;
 }
 
-.hero-paragraph-background {
-    background-color: gray;
-    opacity: 40%;
-}
-
 .hero-paragraph {
-    width: 400px;
-    color: black;
-    opacity: 100%;
-}
-
-
-.hero-button {
-    margin-left: 6em;
-}
-
-.hero-h2 {
-    max-width: 500px;
+    /* width: 400px; */
+    color: rgb(23, 69, 100);
+    opacity: 80%;
+    text-align: left;
 }

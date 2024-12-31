@@ -44,3 +44,8 @@ button, a {
     font-weight: 600;
 }
 
+@media (max-width: 600px) {
+    .service-header{
+        top: 1em;
+    }
+}
