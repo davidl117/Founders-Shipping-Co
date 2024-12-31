@@ -16,7 +16,7 @@ export default function serviceList() {
           <hr/>
           <br></br>
 
-          <h4 id="contact">Contract Services</h4>
+          <h4 id="contract">Contract Services</h4>
           <p>Have a recurring shipment? We can work out a schedule and a price so you wont have to worry
             about finding a new carrier every time this shipment occurs.
           </p>
