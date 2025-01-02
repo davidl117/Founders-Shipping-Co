@@ -10,10 +10,11 @@ import emailjs from '@emailjs/browser';
 export default  function contactForm() {
 
 const [validated, setValidated] = useState(false);
-const form = useRef();
+const form = useRef<HTMLFormElement>(null);
 
-const sendEmail = (e) => {
+const sendEmail = (e:  React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if(form.current){
     emailjs.sendForm('service_nx5586o', 
                      "template_7ksyypc", 
                      form.current, {publicKey:"kVw8CQFQRx8X54hXz"})
@@ -23,6 +24,7 @@ const sendEmail = (e) => {
             console.log("failed " + error);
     });
   }
+}
 
   const handleSubmit = (e) => {
     const form = e.currentTarget;
@@ -45,10 +47,10 @@ const sendEmail = (e) => {
     
     return (
     <Form 
+      ref={form}
       validated={validated} 
       onSubmit={handleSubmit}
       className='contactForm-style'
-      ref={form}
       >
       <h1>{validated ? "Form Submitted" : "Contact us for a Quote" }</h1>
       <div style={styles}>

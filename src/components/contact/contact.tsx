@@ -2,7 +2,7 @@ import "./contact.css"
 import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Button from 'react-bootstrap/Button';
-import { useState,useRef } from "react";
+import { useState,useRef} from "react";
 import emailjs from "@emailjs/browser";
 
 export default function contact() {
@@ -20,8 +20,7 @@ const sendEmail = (e) => {
      }, (error) => {
             console.log("failed " + error);
     });
-  }
-
+  } 
 
   const handleSubmit = (e) => {
     const form = e.currentTarget;
