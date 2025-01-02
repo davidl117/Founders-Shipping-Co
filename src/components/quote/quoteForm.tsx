@@ -26,7 +26,7 @@ const sendEmail = (e:  React.FormEvent<HTMLFormElement>) => {
   }
 }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     const form = e.currentTarget;
     if (form.checkValidity() === true) {
       e.preventDefault();

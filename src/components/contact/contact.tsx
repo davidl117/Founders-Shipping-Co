@@ -8,9 +8,10 @@ import emailjs from "@emailjs/browser";
 export default function contact() {
 
   const [validated, setValidated] = useState(false);
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-const sendEmail = (e) => {
+const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  if (form.current) {
     e.preventDefault();
     emailjs.sendForm('service_nx5586o', 
                      "template_2er10ud", 
@@ -21,8 +22,9 @@ const sendEmail = (e) => {
             console.log("failed " + error);
     });
   } 
+}
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     const form = e.currentTarget;
     if (form.checkValidity() === true) {
       e.preventDefault();
