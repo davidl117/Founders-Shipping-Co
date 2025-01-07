@@ -14,6 +14,7 @@ export default function App() {
     <Router>
       <Navbar/>
       <Routes>
+       <Route path ="/" element={<HomePage/>} />
        <Route path ="/homePage" element={<HomePage/>} />
        <Route  path ="/quoteForm" element={<QuoteForm/>} />
        <Route  path ="/contact" element={<Contact/>} />
