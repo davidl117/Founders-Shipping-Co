@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" fixed="top">
       <Container className='link-color-fix'>
-        <img className="logo-position" src="logo.svg" alt="logo" />
+        <Nav.Link href='/homePage'><img className="logo-position" src="logo.svg" alt="logo" /></Nav.Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
