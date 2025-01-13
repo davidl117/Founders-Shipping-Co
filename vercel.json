@@ -1,14 +1,24 @@
+// {
+//     "builds": [
+//       {
+//         "src": "src/main.tsx",
+//         "use": "@vercel/node"
+//       }
+//     ],
+//     "routes": [
+//       {
+//         "src": "/(.*)",
+//         "dest": "/index.html"
+//       }
+//     ]
+//   }
 {
-    "builds": [
-      {
-        "src": "src/",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/index.html"
-      }
-    ]
-  }
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
+}
